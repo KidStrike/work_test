@@ -2,7 +2,7 @@ from robot.libraries.BuiltIn import BuiltIn
 from playwright.sync_api import sync_playwright
 
 
-def test_open_multitude_page():
+def test_open_page():
     with sync_playwright() as playwright:
         try:
             browser = playwright.chromium.launch(headless=False)
@@ -32,4 +32,4 @@ def test_open_multitude_page():
 
 if __name__ == "__main__":
     robot = BuiltIn()
-    robot.run_keyword("test_open_multitude_page")
+    robot.run_keyword("test_open_page")
